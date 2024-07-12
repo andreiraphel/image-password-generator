@@ -1,5 +1,6 @@
 from PIL import Image
 
+# Change this !!!
 # Image path
 image_path = 'W:/pass/google-1.png'
 

@@ -1,8 +1,11 @@
 from PIL import Image
 
+# Image path
+image_path = 'W:/pass/google-1.png'
+
 # Open the image file
 def main():
-    with Image.open('W:/pass/google-1.png') as img:
+    with Image.open(image_path) as img:
         height, width = img.size
         pixels = img.load()
 

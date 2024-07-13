@@ -1,5 +1,9 @@
 from PIL import Image
 
-im = Image.open('W:/pass/twitter.webp')
+# Change this !!!
+path = 'W:/pass/twitter.webp'
+output = 'W:/pass/twitter.png'
 
-im.save('W:/pass/twitter.png')
+def image_converter(path, output):
+    with Image.open(path) as img:
+        img.save(output)

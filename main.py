@@ -22,13 +22,24 @@ def main():
             binary_list.append(letterToBinary(x))
         
         # Pixel interval
-        print(len(msg))
         interval_height = len(msg)
         interval_width = interval_height + hidden_interval
 
-        print(binary_list)
         selected_pixels = [(x,y) for x in range(0, height, interval_height) for y in range(0, width, interval_width)]
 
+        string_pass = ""
+        for x in selected_pixels:
+            color = pixels[x][2]
+            if color not in range(32, 126):
+                string_pass += chr(97)
+            else:
+                string_pass += chr(color)
+
+        password = string_pass[1:65]
+        print(password)
+    
+                
+        
 # Letter to binary function
 def letterToBinary(n):
     return ''.join(format(ord(n), 'b'))

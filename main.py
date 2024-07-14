@@ -14,12 +14,10 @@ def main():
 
         # Change these !!!
         # Hidden message
-        msg = 'secret'
-        hidden_interval = 10
+        hidden_message = 'secret'
+        hidden_interval = 2
 
-        binary_list = []
-        for x in msg:
-            binary_list.append(letterToBinary(x))
+        binary_list = [letterToBinary(char) for char in hidden_message]
         
         # Pixel interval
         interval_height = len(msg)
